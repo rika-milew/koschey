@@ -991,7 +991,11 @@ footer .container {
         
       }
     
-     
+      .section-title h2 {
+        white-space: wrap;
+        text-align: center;
+        line-height: 40px;
+    }
     
      .item-photo {
         width: 480px;
