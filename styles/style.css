@@ -22,6 +22,9 @@ body {
 section {
     padding: 60px 0 100px;
 }
+
+
+
 .section-title {
     width: 860px;
     height: 80px;
@@ -30,6 +33,19 @@ section {
     justify-content: center;
     align-items: center;
     margin: 0 auto 60px; 
+    cursor: pointer;
+}
+
+.catalog-section-title {
+    width: 860px;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 0; 
+    cursor: pointer;
+
 }
 
 .section-title-text {
@@ -37,7 +53,20 @@ section {
     color: #78866b;
 }
 
+.catalog-section-title {
+    font-size: 40px;
+    color: #78866b;
+
+}
+
 .section-title h2 {
+    margin: 0 20px 0;
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.catalog-section-title h2 {
     margin: 0 20px 0;
     font-family: 'Merriweather', serif;
     font-weight: 700;
@@ -49,6 +78,9 @@ section {
     height: 2px;
     background-color: #78866b;
 }
+
+
+
 
 /* header */
 
@@ -204,13 +236,56 @@ section {
    
  }
 
+
+ .section-catalog {
+
+        padding: 60px 0 60px;
+    
+    
+ }
+
+ .catalog-container {
+    cursor: pointer;
+ }
+
+
+ .catalog-switcher {
+background-image: url(../images/switcher1.svg);
+width: 100px;
+height: 20px;
+
+float: left;
+cursor: pointer;
+transition: 0.3s ease;
+margin-top: 30px;
+position: absolute;
+
+ }
+
+ .switcher-opened {
+    background-image: url(../images/switcher3.svg);
+    width: 84.85px;
+    height: 84.85px;
+    margin-top: 0;
+    
+
+ }
+
 .catalog_items {
-    display: grid;
+    display: none;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 30px;
     row-gap: 40px;
     color: #ffffff;
+    margin-top: 50px;
+    margin-bottom: 50px;
  }
+
+ .catalog-opened {
+display: grid;
+
+ }
+
 
  .catalog__item {
     display: flex;
@@ -274,7 +349,7 @@ section {
 
 
 
- #catalog2, #catalog4, #catalog6, #catalog8 {
+ #catalog2, #catalog4, #catalog6, #catalog8, #catalog10 {
     background-color: #edeeef;
  }
 
@@ -604,7 +679,7 @@ footer .container {
 @media screen and (max-width: 1306px) {
 
     .section-title {
-        margin-bottom: 40px;
+        margin-bottom: 60px;
     }
 
     .header__info h1
@@ -681,6 +756,10 @@ footer .container {
         
         
       }
+
+      .section-title-line {
+        display: none;
+     }
 
       .skills__item p {
         width: 220px;
@@ -817,6 +896,16 @@ font-size: 24px;
         column-gap: 15px;
     }
 
+    .section-title h2 {
+        white-space: wrap;
+    }
+
+    
+    .catalog-section-title h2 {
+        white-space: wrap;
+    }
+
+
 }
 
 
@@ -828,17 +917,37 @@ font-size: 24px;
 
     
     .container {
-        padding:  0 50px;
+        padding:  0 40px;
         max-width: 100%; 
     }
     .catalog_items {
-        display: grid;
+        display: none;
         grid-template-columns: 1fr 1fr;
         column-gap: 30px;
         row-gap: 40px;
      }
 
-     
+
+ .catalog-opened {
+display: grid;
+
+ }
+
+
+ .section-title,  .catalog-section-title {
+    width: 80%;
+
+}
+
+
+
+
+ .section-title h2, .catalog-section-title h2{
+    white-space: wrap;
+    text-align: center;
+    line-height: 40px;
+    font-size: 32px;
+}
 
      .item-photo {
         width: 300px;
@@ -865,18 +974,16 @@ font-size: 24px;
         
       }
 
-      .section-title {
+      .section-title, .catalog-section-title {
         width: 90%;
 
     }
 
     .section-title-text {
-        font-size: 34px;
+        font-size: 32px;
     }
     
-    .section-title h2 {
-        white-space: nowrap;
-    }
+  
 
     .header__text {
        
@@ -928,7 +1035,7 @@ footer .container {
 @media screen and (max-width: 971px) { 
 
     .skills__items {
-        display: grid;
+        display: none;
         grid-template-columns: 1fr 1fr;
         column-gap: 40px;
         row-gap: 60px;
@@ -948,6 +1055,11 @@ footer .container {
         margin-right: 90px;
     }
 
+
+    
+
+ 
+
 }
 
 
@@ -965,7 +1077,10 @@ footer .container {
       }
 
 
-
+      .section-title, .catalog-section-title {
+        width: 70%;
+    
+    }
       
 
 }
@@ -975,12 +1090,31 @@ footer .container {
 
 @media screen and (max-width: 850px) {  
 
+    .section-title {
+       margin-bottom: 40px;
+
+    }
+
+    .section-catalog {
+
+        padding: 40px 0 40px;
     
+    
+ }
+
+
+
      .catalog_items {
-        display: grid;
+        display: none;
         grid-template-columns: 1fr;
         column-gap: 0;
         row-gap: 40px;
+     }
+
+     
+ .catalog-opened {
+    display: grid;
+    
      }
 
 
@@ -991,11 +1125,7 @@ footer .container {
         
       }
     
-      .section-title h2 {
-        white-space: wrap;
-        text-align: center;
-        line-height: 40px;
-    }
+ 
     
      .item-photo {
         width: 480px;
@@ -1059,9 +1189,9 @@ footer .container {
     }
     
 
-    .section-title-line {
-        display: none;
-     }
+    
+  
+      
    
 
 }
@@ -1077,10 +1207,11 @@ footer .container {
         font-size: 30px;
     }
 
-    .section-title h2 {
+    .section-title h2, .catalog-section-title h2 {
         white-space: wrap;
         text-align: center;
         line-height: 40px;
+        font-size: 30px;
     }
 
 
@@ -1180,6 +1311,17 @@ footer .container {
         background-color: #BDAE82;
     } */
 
+    .section-title h2, .catalog-section-title h2 {
+        white-space: wrap;
+        text-align: center;
+        line-height: 40px;
+        font-size: 28px;
+    }
+    
+    .section-title, .catalog-section-title {
+        width: 62%;
+    
+    }
 }
 
 
@@ -1236,6 +1378,35 @@ footer .container {
         column-gap: 0;
         margin-top: 60px;
      }
+
+
+     .catalog-switcher {
+        background-image: url(../images/switcher1.svg);
+        background-size: cover;
+        width: 80px;
+        height: 16px;
+        margin-top: 32px;
+        position: absolute;
+        
+         }
+
+
+         .switcher-opened {
+            background-image: url(../images/switcher3.svg);
+            width: 67.91px;
+            height: 67.91px;
+            margin-top: 6px;
+            
+        
+         }
+        
+         .section-title h2, .catalog-section-title h2 {
+            font-size: 26px;
+            line-height: 36px;
+        }
+
+
+
 }
 
 @media screen and (max-width: 598px) { 
@@ -1279,6 +1450,12 @@ footer .container {
     .header .container {
         background-position: 75%;
     }
+
+
+    .section-title h2, .catalog-section-title h2 {
+        font-size: 24px;
+    }
+
 
 
 }
@@ -1356,7 +1533,45 @@ footer .container {
     .footer__contacts {
         margin-bottom: 20px;
     }
+
+
+
+
+    .section-title h2, .catalog-section-title h2 {
+        font-size: 22px;
+    }
+
+    .section-title, .catalog-section-title {
+        width: 70%;
+        height: 60px;
+    }
+
+
+    .catalog-switcher {
+        background-image: url(../images/switcher1.svg);
+        background-size: cover;
+        width: 60px;
+        height: 12px;
+        margin-top: 24px;
+        position: absolute;
+        
+         }
+
+         .switcher-opened {
+            background-image: url(../images/switcher3.svg);
+            width: 50.93px;
+            height: 50.93px;
+            margin-top: 4.50px;
+            
+        
+         }
+
+         
 }
+
+
+
+
 
 @media screen and (max-width: 495px) { 
 
@@ -1367,7 +1582,7 @@ footer .container {
 
     }
 
-    .section-title h2 {
+    .section-title h2, .catalog-section-title h2 {
         line-height: 36px;
     }
 
@@ -1409,6 +1624,20 @@ footer .container {
 }
 
 @media screen and (max-width: 470px) { 
+
+
+    .section-title {
+        margin-bottom: 30px;
+ 
+     }
+ 
+     .section-catalog {
+ 
+         padding: 30px 0;
+     
+     
+  }
+ 
 
     .menu__btn {
         position: absolute;
@@ -1488,11 +1717,16 @@ footer .container {
 
     }
 
-    .section-title-text {
-        font-size: 26px;
+   
+
+    .section-title h2, .catalog-section-title h2 {
+        font-size: 18px;
+        line-height: 26px;
     }
 
-
+    .section-title, .catalog-section-title {
+        width: 65%;
+    }
    
     
 }
@@ -1525,19 +1759,9 @@ footer .container {
 }
 
 
-.section-title-text {
-    font-size: 24px;
-   
 
-}
 
-.section-title h2 {
-    line-height: 32px;
-}
 
-.section-title {
-    width: 100%;
-}
 
 .skills__item h3 {
     font-size: 18px;
@@ -1562,6 +1786,36 @@ footer .container {
     line-height: 26px;
  }
 
+
+ .section-title h2, .catalog-section-title h2 {
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.section-title, .catalog-section-title {
+    width: 75%;
+}
+
+
+
+.catalog-switcher {
+    background-image: url(../images/switcher1.svg);
+    background-size: cover;
+    width: 45px;
+    height: 9px;
+    margin-top: 25.50px;
+    position: absolute;
+    
+     }
+
+     .switcher-opened {
+        background-image: url(../images/switcher3.svg);
+        width: 38.20px;
+        height: 38.20px;
+        margin-top: 10.90px;
+        
+    
+     }
 
 }
 
@@ -1628,7 +1882,7 @@ footer .container {
     
     }
     
-    .section-title h2 {
+    .section-title h2, .catalog-section-title h2 {
         line-height: 30px;
     }
 
@@ -1647,6 +1901,20 @@ footer .container {
         line-height: 24px;
      }
 
+     .container {
+   
+        padding:  0 30px;
+        max-width: 1270px; 
+    }
+    
+    .section-title h2, .catalog-section-title h2 {
+        font-size: 16px;
+        line-height: 24px;
+    }
+    
+    .section-title, .catalog-section-title {
+        width: 75%;
+    }
 
 }
 
