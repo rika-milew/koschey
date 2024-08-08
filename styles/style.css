@@ -1980,6 +1980,12 @@ footer .container {
      }
 
 
+     .price__block {
+        width: 100%;
+        padding: 30px;
+         
+    }
+
 
 }
 
