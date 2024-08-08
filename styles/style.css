@@ -353,6 +353,86 @@ display: grid;
     background-color: #edeeef;
  }
 
+/* price  */
+
+
+#price {
+    background-color: #000000;
+    border-bottom: 2px solid #78866b;
+}
+
+#price .container {
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+
+.price__blocks {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 25px;
+}
+
+.price__block {
+    width: 450px;
+    height: 505px;
+    border: 3px solid #78866b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px; 
+}
+
+.price__headline {
+    height: 72px;
+    overflow: hidden;
+    font-size: 28px;
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+    line-height: 32px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-align: center;
+    align-content: center;
+}
+
+.price__cost {
+    font-size: 24px;
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+    line-height: 48px;
+    color: #78866b;
+    margin-bottom: 20px;
+}
+
+.price__list {
+    font-size: 18px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    line-height: 36px;
+    color: #ffffff;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.price__button {
+    width: 220px;
+    height: 58px;
+    background-color: #78866b;
+    color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    cursor: pointer;
+    border: 0px;
+    transition: 0.3s ease;
+}
+
+.price__button:hover {
+    color: #ffffff;
+}
 
 
  /* skills  */
@@ -411,6 +491,12 @@ display: grid;
     background-color: #78866b;
 
 }
+
+#about .container {
+    padding-top: 40px;
+    padding-bottom: 30px;
+   
+ }
 
 
 
@@ -672,6 +758,13 @@ footer .container {
    column-gap: 30px;   
 }
 
+
+.price__block {
+    width: 100%;
+    height: auto;
+    padding-bottom: 40px;
+}
+
 }
 
 
@@ -905,6 +998,8 @@ font-size: 24px;
         white-space: wrap;
     }
 
+    
+
 
 }
 
@@ -988,6 +1083,20 @@ display: grid;
     .header__text {
        
         line-height: 36px;
+}
+
+
+
+.price__blocks {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 25px;
+    row-gap: 30px;
+}
+
+.price__block {
+    width: 75%;
+    margin: 0 auto;
 }
 
 
@@ -1289,9 +1398,22 @@ footer .container {
     margin-bottom: 40px;
 }
 
+/* #price .container {
+    padding: 75px 20px 80px;
 
+} */
 
+.price__blocks {
+    margin-top: 50px;
+    column-gap: 0;
+    row-gap: 50px;
+}
 
+.price__block {
+    width: 480px;
+    height: 505px;
+    padding-top: 40px;  
+}
 
 }
 
@@ -1504,6 +1626,14 @@ footer .container {
      padding: 9px 24px 9px 24px;
     }
 
+    .price__block {
+        width: 400px; 
+    }
+    
+    .price__blocks {
+        column-gap: 0;
+    }
+
 
     .footer__text p {
         font-size: 16px;
@@ -1575,7 +1705,9 @@ footer .container {
 
 @media screen and (max-width: 495px) { 
 
-
+    .price__block {
+        width: 370px;   
+    }
    
     .section-title-text {
         font-size: 28px;
@@ -1727,6 +1859,36 @@ footer .container {
     .section-title, .catalog-section-title {
         width: 65%;
     }
+
+
+    .price__block {
+        width: 370px;
+        height: auto;
+        padding-top: 35px;  
+    }
+
+    .price__headline {
+        font-size: 26px;
+    }
+    
+    .price__cost {
+        font-size: 22px;
+    }
+    
+    .price__list {
+        font-size: 16px; 
+    }
+    
+    .price__block {
+        width: 90%; 
+    }
+
+    .price__button {
+        width: 180px;
+        height: 50px;
+        font-size: 18px;
+    }
+    
    
     
 }
