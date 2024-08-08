@@ -1979,6 +1979,8 @@ footer .container {
     
      }
 
+
+
 }
 
 @media screen and (max-width: 380px) { 
@@ -2078,6 +2080,15 @@ footer .container {
         width: 75%;
     }
 
+ 
+
+
+    .price__block {
+        width: 290px;
+        padding: 20px;
+         
+    }
+
 }
 
 
@@ -2093,6 +2104,11 @@ footer .container {
         height: 200px;
         
       }
+
+      .price__block {
+        width: 100%;
+       
+    }
 
     
 }
