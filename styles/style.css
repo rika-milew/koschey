@@ -1145,7 +1145,7 @@ footer .container {
 @media screen and (max-width: 971px) { 
 
     .skills__items {
-        display: none;
+        display: grid;
         grid-template-columns: 1fr 1fr;
         column-gap: 40px;
         row-gap: 60px;
