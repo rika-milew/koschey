@@ -1091,7 +1091,7 @@ display: grid;
 .price__blocks {
     display: grid;
     grid-template-columns: 1fr;
-    column-gap: 25px;
+    column-gap: 0;
     row-gap: 0;
 }
 
