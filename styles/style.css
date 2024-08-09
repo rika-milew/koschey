@@ -373,13 +373,12 @@ display: grid;
 }
 
 .price__block {
-    width: 450px;
-    height: 505px;
+    width: 100%;
+    height: auto;
     border: 3px solid #78866b;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     padding: 40px; 
 }
 
@@ -761,8 +760,6 @@ footer .container {
 
 
 .price__block {
-    width: 100%;
-    height: auto;
     padding-bottom: 40px;
 }
 
@@ -810,6 +807,11 @@ footer .container {
 
 
 }
+
+/* .price__block {
+    width: 340px;
+} */
+
 
 }
 
@@ -1004,7 +1006,21 @@ font-size: 24px;
 
 }
 
+@media screen and (max-width: 1099px) { 
 
+.price__blocks {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 0;
+    row-gap: 40px;
+}
+
+.price__block {
+    width: 70%;
+    margin: 0 auto;
+}
+
+}
 
 
 
@@ -1038,7 +1054,7 @@ display: grid;
 
 
 
- .section-title h2, .catalog-section-title h2{
+ .section-title h2, .catalog-section-title h2 {
     white-space: wrap;
     text-align: center;
     line-height: 40px;
@@ -1088,17 +1104,6 @@ display: grid;
 
 
 
-.price__blocks {
-    display: grid;
-    grid-template-columns: 1fr;
-    column-gap: 0;
-    row-gap: 40px;
-}
-
-.price__block {
-    width: 75%;
-    margin: 0 auto;
-}
 
 
 footer {
@@ -1135,6 +1140,11 @@ footer .container {
 
 .footer__contacts {
     margin-bottom: 25px;
+}
+
+.price__block {
+    width: 75%;
+    margin: 0 auto;
 }
 
 }
@@ -1411,8 +1421,7 @@ footer .container {
 }
 
 .price__block {
-    width: 480px;
-    height: 505px;
+    width: 80%;
     padding-top: 40px;  
 }
 
@@ -1628,7 +1637,7 @@ footer .container {
     }
 
     .price__block {
-        width: 400px; 
+        width: 90%; 
     }
     
     .price__blocks {
@@ -1707,7 +1716,7 @@ footer .container {
 @media screen and (max-width: 495px) { 
 
     .price__block {
-        width: 370px;   
+        width: 95%   
     }
    
     .section-title-text {
@@ -1863,8 +1872,7 @@ footer .container {
 
 
     .price__block {
-        width: 370px;
-        height: auto;
+       
         padding-top: 35px;  
     }
 
@@ -1880,9 +1888,7 @@ footer .container {
         font-size: 16px; 
     }
     
-    .price__block {
-        width: 90%; 
-    }
+
 
     .price__button {
         width: 180px;
@@ -2091,7 +2097,7 @@ footer .container {
 
 
     .price__block {
-        width: 290px;
+
         padding: 20px;
          
     }
