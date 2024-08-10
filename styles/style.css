@@ -1009,15 +1009,19 @@ font-size: 24px;
 @media screen and (max-width: 1099px) { 
 
 .price__blocks {
-    display: grid;
+    /* display: grid;
     grid-template-columns: 1fr;
     column-gap: 0;
-    row-gap: 40px;
+    row-gap: 40px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .price__block {
     width: 70%;
-    margin: 0 auto;
+    margin-bottom: 50px;
+    
    
 }
 
