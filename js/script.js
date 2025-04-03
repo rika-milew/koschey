@@ -1,3 +1,5 @@
+
+
 // menu
 
 let menu = document.getElementById("menu");
@@ -127,3 +129,145 @@ function switchCatalog5() {
         }
 
 
+
+
+let items1 = [
+    {
+id: "catalog__item1",
+photo1: "images/item1.png",
+photo2: "images/items/item1-1.jpg",
+photo3: "images/items/item1-3.jpg",
+heading: "Чехол1 под бронежилет 6094 TV-103",
+text: "<span>Артикул</span>: TV-103-ATFGN-B1",
+price: "200 BYN / 15 804 RUB",
+color: "Олива",
+},
+{
+  id: "catalog__item2",
+  photo1: "images/items/item1-1.jpg",
+  heading: "Чехол2 под бронежилет 6094 TV-103",
+  text: "<span>Артикул</span>: TV-103-ATFGN-B2",
+  price: "200 BYN / 15 804 RUB",
+  color: "Олива",
+},
+{
+  id: "catalog__item3",
+  photo: "images/item1.png",
+  heading: "Чехол3 под бронежилет 6094 TV-103",
+  text: "<span>Артикул</span>: TV-103-ATFGN-B3",
+  price: "200 BYN / 15 804 RUB",
+  color: "Олива",
+},
+{
+  id: "catalog__item4",
+  photo: "images/item1.png",
+  heading: "Чехол4 под бронежилет 6094 TV-103",
+  text: "<span>Артикул</span>: TV-103-ATFGN-B4",
+  price: "200 BYN / 15 804 RUB",
+  color: "Олива",
+},
+]
+
+
+let itemCards1 = "";
+
+
+for (i=0; i<items1.length; i++) {
+  itemCards1 += `
+<div id="${items1[i].id}" class="catalog__item">
+                    <div class="images">
+                      <img src="${items1[i].photo1}" class="item-photo">
+                      <img src="${items1[i].photo2}" class="item-photo">
+                      <img src="${items1[i].photo3}" class="item-photo">
+                    </div>
+                    <p class="item-heading">
+                    ${items1[i].heading}
+                    </p> 
+                    <p class="item-text">
+                    ${items1[i].text}
+                    </p> 
+                    <p class="item-color">
+                    <span>Цвет</span>: ${items1[i].color}
+                    </p>
+                    <p class="item-price">
+                    ${items1[i].price}
+                    </p>
+                </div>
+`;
+}
+
+
+catalogItems1.innerHTML = itemCards1;
+
+
+// slider
+
+
+
+
+
+
+class HvrSlider {
+  constructor(selector) {
+    const elements = document.querySelectorAll(selector);
+    elements.forEach((el) => {
+      if (el.querySelectorAll('img').length > 1) {
+        const hvr = document.createElement('div');
+        hvr.classList.add('hvr');
+
+        const hvrImages = document.createElement('div');
+        hvrImages.classList.add('hvr__images');
+        hvr.appendChild(hvrImages);
+
+        const hvrSectors = document.createElement('div');
+        hvrSectors.classList.add('hvr__sectors');
+        hvrImages.appendChild(hvrSectors);
+
+        const hvrDots = document.createElement('div');
+        hvrDots.classList.add('hvr__dots');
+        hvr.appendChild(hvrDots);
+
+        el.parentNode.insertBefore(hvr, el);
+        hvrImages.prepend(el);
+
+        const hvrImagesArray = hvr.querySelectorAll('img');
+        hvrImagesArray.forEach(() => {
+          hvrSectors.insertAdjacentHTML('afterbegin', '<div class="hvr__sector"></div>');
+          hvrDots.insertAdjacentHTML('afterbegin', '<div class="hvr__dot"></div>');
+        });
+        hvrDots.firstChild.classList.add('hvr__dot--active');
+        const setActiveEl = function (targetEl) {
+          const index = [...hvrSectors.children].indexOf(targetEl);
+          hvrImagesArray.forEach((img, idx) => {
+            if (index == idx) {
+              img.style.display = 'block';
+            } else {
+              img.style.display = 'none';
+            }
+          });
+          hvr.querySelectorAll('.hvr__dot').forEach((dot, idx) => {
+            if (index == idx) {
+              dot.classList.add('hvr__dot--active');
+            } else {
+              dot.classList.remove('hvr__dot--active');
+            }
+          });
+        };
+        hvrSectors.addEventListener('mouseover', function (e) {
+          if (e.target.matches('.hvr__sector')) {
+            setActiveEl(e.target);
+          }
+        });
+        hvrSectors.addEventListener('touchmove', function (e) {
+          const position = e.changedTouches[0];
+          const target = document.elementFromPoint(position.clientX, position.clientY);
+          if (target.matches('.hvr__sector')) {
+            setActiveEl(target);
+          }
+        });
+      }
+    });
+  }
+}
+
+new HvrSlider('.images');
