@@ -288,6 +288,7 @@ display: grid;
 
 
  .catalog__item {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -301,14 +302,34 @@ display: grid;
   .item-photo {
     width: 382px;
     height: 382px;
-    background-size: contain;
+    background-size: cover;
     background-image: url(../images/item1.png);
     /* border: 1px solid black; */
     margin-bottom: 20px;
-    
+   
+
   }
 
+  .prev-button,
+.next-button {
+  position: absolute;
+  top: 25%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  background-color: transparent;
+  border: none;
+  font-size: 28px;
+  color: #78866b;
+}
+
+.prev-button {
+    left: 10px;
+  }
   
+  .next-button {
+    right: 10px;
+  }
 
 
   .item-heading {
@@ -339,6 +360,46 @@ display: grid;
     color: #78866b;
  }
 
+ .item-color {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #000000;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    text-align: center; 
+    margin-top: 0;
+    margin-bottom: 5px;
+
+ }
+
+ .item-colors {
+width: 20%;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 5px;
+
+ }
+
+ .item-color-block {
+    width: 20px;
+    height: 20px;
+    background-color: #808000;
+    cursor: pointer;
+ }
+
+
+ .item-color-block:active {
+    border: 2px solid #000000;
+    
+ }
+
+
+ .item-color span {
+    color: #78866b;
+ }
+
  .item-price {
     font-size: 20px;
     font-weight: 700;
@@ -352,6 +413,63 @@ display: grid;
  #catalog2, #catalog4, #catalog6, #catalog8, #catalog10 {
     background-color: #edeeef;
  }
+
+
+ /* image slider */
+
+ .hvr__images {
+    position: relative;
+  }
+  
+  .hvr__sectors {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+  }
+  
+  .hvr__sector {
+    flex-grow: 1;
+  }
+
+
+  .images {
+    display: flex;
+    overflow: hidden;
+  }
+  
+  .image {
+    display: block;
+  }
+
+
+  img {
+    display: none;
+  }
+  
+  img:first-child {
+    display: block;
+  }
+  
+  .hvr__dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hvr__dot {
+    width: 5px;
+    height: 5px;
+    margin: 10px 2px 0;
+    border-radius: 50%;
+    background: #d6dbe0;
+  }
+  
+  .hvr__dot--active {
+    background: #000;
+  }
 
 /* price  */
 
