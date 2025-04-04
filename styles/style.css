@@ -300,6 +300,10 @@ display: grid;
     line-height: 36px;
     border: 1px solid rgb(120, 134, 107, 0.3);
     cursor: pointer;
+     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  /* Предотвращаем появление контекстного меню на устройствах Apple */
+  -webkit-touch-callout: none;
+  /* Осторожно относимся к выбору контента */
    
   }
 
