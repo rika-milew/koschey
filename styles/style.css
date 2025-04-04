@@ -263,7 +263,6 @@ position: absolute;
   /* Предотвращаем появление контекстного меню на устройствах Apple */
   -webkit-touch-callout: none;
   /* Осторожно относимся к выбору контента */
-  -webkit-user-select: none;
 
  }
 
