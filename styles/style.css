@@ -2,12 +2,6 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
     margin: 0;
-    /* Синяя подсветка сливается с фоном */
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  /* Предотвращаем появление контекстного меню на устройствах Apple */
-  -webkit-touch-callout: none;
-  /* Осторожно относимся к выбору контента */
-  -webkit-user-select: none;
 }
 
 html {
@@ -16,7 +10,6 @@ html {
 
 body {
     margin: 0 auto;
-  -webkit-tap-highlight-color: transparent;
 }
 
 .container {
@@ -266,6 +259,11 @@ cursor: pointer;
 transition: 0.3s ease;
 margin-top: 30px;
 position: absolute;
+-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  /* Предотвращаем появление контекстного меню на устройствах Apple */
+  -webkit-touch-callout: none;
+  /* Осторожно относимся к выбору контента */
+  -webkit-user-select: none;
 
  }
 
@@ -303,8 +301,7 @@ display: grid;
     line-height: 36px;
     border: 1px solid rgb(120, 134, 107, 0.3);
     cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
-}
+   
   }
 
   /* .item-photo {
@@ -429,6 +426,11 @@ margin-bottom: 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  /* Предотвращаем появление контекстного меню на устройствах Apple */
+  -webkit-touch-callout: none;
+  /* Осторожно относимся к выбору контента */
+  -webkit-user-select: none;
 }
 
 .item-photo {
@@ -448,6 +450,11 @@ margin-bottom: 5px;
     cursor: pointer;
     z-index: 10;
     transition: transform 0.3s ease;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  /* Предотвращаем появление контекстного меню на устройствах Apple */
+  -webkit-touch-callout: none;
+  /* Осторожно относимся к выбору контента */
+  -webkit-user-select: none;
 }
 
 .slider-button img {
