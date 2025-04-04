@@ -2,6 +2,12 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
     margin: 0;
+    /* Синяя подсветка сливается с фоном */
+  -webkit-tap-highlight-color: transparent;
+  /* Предотвращаем появление контекстного меню на устройствах Apple */
+  -webkit-touch-callout: none;
+  /* Осторожно относимся к выбору контента */
+  -webkit-user-select: none;
 }
 
 html {
