@@ -259,10 +259,7 @@ cursor: pointer;
 transition: 0.3s ease;
 margin-top: 30px;
 position: absolute;
--webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  /* Предотвращаем появление контекстного меню на устройствах Apple */
-  -webkit-touch-callout: none;
-  /* Осторожно относимся к выбору контента */
+
 
  }
 
@@ -300,10 +297,6 @@ display: grid;
     line-height: 36px;
     border: 1px solid rgb(120, 134, 107, 0.3);
     cursor: pointer;
-     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  /* Предотвращаем появление контекстного меню на устройствах Apple */
-  -webkit-touch-callout: none;
-  /* Осторожно относимся к выбору контента */
    
   }
 
